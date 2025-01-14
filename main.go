@@ -29,8 +29,8 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println("| Package | Coverage | Lines |")
-	fmt.Println("|---------|----------|-------|")
+	fmt.Println("| Package | Lines | Coverage |")
+	fmt.Println("|---------|-------|----------|")
 	printCov := func(name string, reached, statements int) {
 		p := percentage(reached, statements)
 		fmt.Printf("| %s | %d/%d | %.2f%% |\n", name, reached, statements, p)
