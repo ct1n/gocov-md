@@ -30,10 +30,10 @@ func main() {
 	}
 
 	fmt.Println("| Package | Lines | Coverage |")
-	fmt.Println("|---------|-------|----------|")
+	fmt.Println("|---------|-------|---------:|")
 	printCov := func(name string, reached, statements int) {
 		p := percentage(reached, statements)
-		fmt.Printf("| %s | %d/%d | %.2f%% |\n", name, reached, statements, p)
+		fmt.Printf("| %s | <div align='center'>%d/%d</div> | %.2f%% |\n", name, reached, statements, p)
 	}
 
 	var totalStatements, totalReached int
